@@ -1,0 +1,89 @@
+/* Modern Sidebar Styles - BNI Theme */
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #f8f9fa;
+  color: #333;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+/* Main Content Wrapper */
+.main-content {
+  min-height: 100vh;
+  width: 100%;
+  padding-top: 80px;
+  padding-bottom: 20px;
+  padding-left: 15px;
+  padding-right: 15px;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+/* Desktop: Add left margin for sidebar */
+@media screen and (min-width: 1024px) {
+  .main-content {
+    width: calc(100% - 256px); /* Full width minus sidebar */
+    margin-left: 256px; /* 64 * 4 = 256px (w-64) */
+    padding-top: 80px;
+    padding-bottom: 25px;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+}
+
+/* Tablet */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .main-content {
+    padding-top: 80px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+/* Mobile */
+@media screen and (max-width: 767px) {
+  .main-content {
+    padding-top: 70px;
+    padding-bottom: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c53030;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #9b2c2c;
+}
+
+/* Ensure content is not hidden */
+main, .container, .content-wrapper {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+}
