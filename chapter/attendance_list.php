@@ -45,11 +45,12 @@ $query = "SELECT
         JOIN region r ON m.region = r.id
         JOIN powerteam p ON m.powerteam = p.id
         JOIN chapters c ON m.chapter = c.id
-        WHERE m.region = :region AND m.chapter = :chapter AND m.status = 1";
+        WHERE m.region = :region AND m.chapter = :chapter AND m.powerteam = :powerteam AND m.status = 1";
 
 $params = [
     ':region' => $region,
-    ':chapter' => $chapter
+    ':chapter' => $chapter,
+    ':powerteam'=> $powerteam
 ];
 
 // Apply filters

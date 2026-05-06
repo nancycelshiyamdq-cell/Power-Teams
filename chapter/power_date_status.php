@@ -77,9 +77,11 @@ foreach ($trend_stmt as $row) {
 // Fetch Power Dates with organiser
 $query = "SELECT pd.*, 
                  m.name AS organiser_name,
-                 m.powerteam
+                 m.powerteam,
+                 p.pvalue
           FROM power_dates pd 
           JOIN members m ON m.id = pd.organiser_id
+          JOIN powerteam p ON m.powerteam = p.id
           
           ORDER BY 
               CASE 
@@ -315,6 +317,7 @@ foreach ($power_dates as $pd) {
                 <th class="px-4 py-2">Company</th>
                 <th class="px-4 py-2">Industry</th>
                 <th class="px-4 py-2">Location</th>
+                <th class="px-4 py-2">Powerteam Name</th>
                 <!-- <th class="px-4 py-2">Status</th>
                 <th class="px-4 py-2">Remarks</th> -->
             </tr>
@@ -329,6 +332,9 @@ foreach ($power_dates as $pd) {
                     <td class="px-4 py-2"><?= htmlspecialchars($pd['company_name']) ?></td>
                     <td class="px-4 py-2"><?= htmlspecialchars($pd['industry']) ?></td>
                     <td class="px-4 py-2"><?= htmlspecialchars($pd['location']) ?></td>
+                    <td class="px-4 py-2"><?= htmlspecialchars($pd['pvalue']) ?></td>
+                    
+                    
                     <!-- <td class="px-4 py-2"> -->
                         <!-- <div class="status-toggle">
                             <button type="button" disabled
