@@ -1,0 +1,92 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+
+
+/* Main Content */
+.main-content {
+    margin-left: 240px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    min-height: 100vh;
+}
+
+.page-header h2 {
+    margin: 0 0 20px;
+}
+
+/* Filter Form */
+.filter-form {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    background-color: #fff;
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.filter-form label {
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.filter-form input[type="date"],
+.filter-form select {
+    padding: 5px 10px;
+}
+
+.filter-form button,
+.filter-form .reset-link {
+    padding: 6px 12px;
+    text-decoration: none;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.filter-form .reset-link {
+    background-color: #888;
+}
+
+
+.reset-link {
+    margin-left: 10px;
+    text-decoration: none;
+    color: #555;
+}
+
+/* Table Styling */
+.table-wrapper {
+    overflow-x: auto;
+    background-color: white;
+    border-radius: 5px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+}
+
+table th,
+table td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: left;
+}
+
+table th {
+    background-color: #eee;
+}

@@ -1,0 +1,1 @@
+<!-- Sidebar is now integrated in header.php -->
